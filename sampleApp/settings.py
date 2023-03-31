@@ -25,8 +25,10 @@ SECRET_KEY = '-j@**w6y78!2xw#&kwx9vm5f4ui=+y0idr-z*6rx6lp6sxzl*2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+#solucion carpeta static
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(" ")
-
+#ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
+#ALLOWED_HOSTS = [host.strip() for host in ALLOWED_HOSTS if host.strip()]
 
 # Application definition
 
@@ -124,3 +126,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
